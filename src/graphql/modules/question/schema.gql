@@ -1,0 +1,26 @@
+type Question {
+  id: ID!
+  author: String
+  question: String!
+  createdAt: String!
+  reply: Reply
+}
+
+type Reply {
+  id: ID!
+  reply: String!
+  createdAt: String!
+}
+
+
+type Query {
+  questions: [Question!]!
+  question(id: ID!): Question
+}
+
+type Mutation {
+  createQuestion(
+    author: String
+    question: String!
+  ): Question
+}

@@ -4,7 +4,7 @@
   "description": "API GraphQl para recursos relacionados ao blog do Deusinho",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js -e js, gql"
+    "start": "nodemon index.js -e js,gql"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/juakacc/deusinho-api#readme",
   "dependencies": {
     "apollo-server": "^2.16.1",
-    "graphql": "^15.3.0"
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.1.0"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
