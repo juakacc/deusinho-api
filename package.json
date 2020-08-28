@@ -23,7 +23,9 @@
   "dependencies": {
     "apollo-server": "^2.16.1",
     "graphql": "^15.3.0",
-    "graphql-tools": "^6.1.0"
+    "graphql-tools": "^6.1.0",
+    "knex": "^0.21.5",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
