@@ -1,7 +1,7 @@
 exports.up = (knex) => (
   knex.schema.createTable('question', (table) => {
     table.increments('id');
-    table.string('author');
+    table.string('author').defaultTo('Anônimo');
     table.string('question').notNullable();
     table.datetime('createdAt').notNullable().defaultTo(knex.fn.now());
   }));

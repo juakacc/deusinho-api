@@ -12,7 +12,6 @@ type Reply {
   createdAt: String!
 }
 
-
 type Query {
   questions: [Question!]!
   question(id: ID!): Question
