@@ -5,10 +5,10 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
-      user: 'juakadb',
-      password: 'juaka123',
-      database: 'deusinho_api',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     },
     migrations: {
       directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
@@ -16,27 +16,28 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
-      database: 'deusinho_api',
-      user: 'juakadb',
-      password: 'juaka123',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     },
     migrations: {
-      tableName: 'knex_migrations',
+      directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
     },
   },
 
   production: {
     client: 'mysql',
     connection: {
-      database: 'deusinho_api',
-      user: 'username',
-      password: 'password',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     },
     migrations: {
-      tableName: 'knex_migrations',
+      directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
     },
   },
-
 };
