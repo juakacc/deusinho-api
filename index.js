@@ -6,6 +6,10 @@ const resolvers = require('./src/graphql/resolvers');
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  engine: {
+    reportSchema: true,
+    variant: 'current',
+  },
 });
 
 server.listen().then(({ url }) => {
