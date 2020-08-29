@@ -3,7 +3,7 @@ exports.up = (knex) => (
     table.increments('id');
     table.string('author');
     table.string('question').notNullable();
-    table.datetime('createdAt').notNullable();
+    table.datetime('createdAt').notNullable().defaultTo(knex.fn.now());
   }));
 
 exports.down = (knex) => (
