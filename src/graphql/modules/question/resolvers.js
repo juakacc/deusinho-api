@@ -5,8 +5,8 @@ module.exports = {
     reply: (parent) => knex('reply').where('question_id', parent.id).first(),
   },
   Query: {
-    question: (_, args) => knex('question').where('id', args.id).first(),
-    questions: () => knex('question').select('*'),
+    question: (_, args) => knex('question').where('id', args.id).andWhere('show', true).first(),
+    questions: () => knex('question').where('show', true).select('*'),
   },
   Mutation: {
     createQuestion: async (_, args) => {

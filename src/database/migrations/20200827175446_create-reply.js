@@ -1,7 +1,7 @@
 exports.up = (knex) => (
   knex.schema.createTable('reply', (table) => {
     table.increments('id');
-    table.string('reply').notNullable();
+    table.text('reply').notNullable();
     table.datetime('createdAt').notNullable().defaultTo(knex.fn.now());
     table.integer('question_id').unsigned().notNullable();
 
