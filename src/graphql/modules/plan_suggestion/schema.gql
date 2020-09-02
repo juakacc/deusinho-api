@@ -1,0 +1,20 @@
+type PlanSuggestion {
+  id: ID!
+  author: String
+  field: String
+  suggestion: String!
+  createdAt: String!
+}
+
+type Query {
+  suggestions: [PlanSuggestion!]!
+  suggestion(id: ID!): PlanSuggestion
+}
+
+type Mutation {
+  createSuggestion(
+    author: String
+    field: String
+    suggestion: String!
+  ): PlanSuggestion
+}
